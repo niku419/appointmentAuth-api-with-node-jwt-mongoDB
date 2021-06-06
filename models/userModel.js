@@ -1,6 +1,10 @@
 const mongoose = require('mongoose')
 const bcrypt = require('bcrypt')
 const User = new mongoose.Schema({
+    name:{
+        type: String,
+        required: true
+    },
     email:{
         type:String,
         required: true
@@ -8,10 +12,6 @@ const User = new mongoose.Schema({
     password:{
         type: String,
         required:true
-    },
-    role:{
-        type:Boolean,
-        student:1
     }
 })
 User.pre('save', async function(next){

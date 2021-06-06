@@ -16,6 +16,9 @@ const scheduleSlots = new mongoose.Schema({
     company:{
         type: String
     },
+    userId:{
+        type: String,
+    },
     booked: false
 })
 

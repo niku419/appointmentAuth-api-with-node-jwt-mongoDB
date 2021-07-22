@@ -18,7 +18,7 @@ const {
     deleteAppointment
 } = require('./middleware/middleware')
 
-const port = 3001
+const PORT = process.env.PORT || 3001
 const app = express()
 
 app.set('view engine','ejs')
@@ -49,6 +49,6 @@ app.post('/companySignin',companySignin)
 app.post('/userSignup',userSignup)
 app.post('/userSignin',userSignin)
 
-app.listen(port,function(req,res){
-    console.log(`server started on ${port}`)
+app.listen(PORT ,function(req,res){
+    console.log(`server started on ${PORT}`)
 })
